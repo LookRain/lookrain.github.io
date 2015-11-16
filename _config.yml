@@ -1,6 +1,6 @@
 baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
-url: "username.github.io" # the base hostname & protocol for your site.
-title: "username-blog"
+url: "luyu.rocks" # the base hostname & protocol for your site.
+title: "Code and Music"
 
 
 paginate: 3 #articles per page
@@ -8,9 +8,9 @@ paginate_path: /blog/page:num #makes pagination working
 
 
 #contacts
-git: "https://github.com/railsr"  #Add your github url here.
-stackoverflow: "http://stackoverflow.com/users/1231365/railsr" #Add your stackoverflow url here.
-twitter: "https://twitter.com/railsr7"  #Add your twitter url here.
+git: "https://github.com/lookrain"  #Add your github url here.
+facebook: "https://www.facebook.com/yu.lu.758"  #Add your twitter url here.
+weibo: "http://weibo.com/u/2353357401"
 
 #disqus comment
 disqus:
@@ -44,3 +44,13 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+
+ftp_host: 'ftp.luyu.rocks'  
+ftp_dir: '/public_html'  
+ftp_passive: false
+
+# optional
+ftp_port: 21                  # default 21  
+ftp_username: 'brantscube'     # default read from stdin  
+ftp_password: 'XiaoYu_3514267'
