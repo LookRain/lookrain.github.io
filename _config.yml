@@ -30,6 +30,7 @@ exclude:
   - "CHANGELOG.md"
   - "Gemfile"
   - "Gemfile.lock"
+  
 permalink: :title
 defaults:
   -
