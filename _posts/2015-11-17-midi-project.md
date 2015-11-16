@@ -6,4 +6,5 @@ tags: [MIDI]
 
 ###First attempt to embed Soundcloud player here
 Soundcloud here.
-{% soundcloud playlists 162602 show_comments=false show_playcount=false show_user=false show_artwork=false %}
+
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/233292858&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
