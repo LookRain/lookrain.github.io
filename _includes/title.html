@@ -1,18 +1,22 @@
 <div id="title">
   <h1>
     {% unless site.git == "" %}
-		  <a id="git-ic" href="{{site.git}}"><i class="fa fa-github"></i></a>	
+		  <a id="git-ic" href="{{site.github}}"><i class="fa fa-github"></i></a>	
     {% endunless %}
 
-    {% unless site.stackoverflow == "" %}
-      <a id="so-ic" href="{{site.stackoverflow}}"><i class="fa fa-stack-overflow"></i></a>
+   
+		{% unless site.facebook == "" %}
+      <a id="fb-ic" href="{{site.facebook}}"><i class="fa fa-facebook" style="color:white"></i></a>
     {% endunless %}
-		
-    <a id="sitename" href="{{site.baseurl}}">username.github.io</a>
+
+    {% unless site.weibo == "" %}
+      <a id="wb-ic" href="{{site.weibo}}"><i class="fa fa-weibo" style="color:white"></i></a>
+    {% endunless %}
+    <a id="sitename" href="http://luyu.rocks">Code and Music</a>
   </h1>
 
   <!-- Add something about you in p tag-->
-  <p>Write something about you here...</p>
+  <p>Code, music & other interesting stuff...</p>
   <hr/>
   
   {% include nav-links.html %} 
