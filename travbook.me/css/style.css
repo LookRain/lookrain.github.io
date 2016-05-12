@@ -1,0 +1,843 @@
+/* ==================================================
+   CSS Imports
+================================================== */
+
+@import url("reset.css");
+@import url("owlcarousel.css");
+@import url("uikit.scrollspy.css");
+
+/* ==================================================
+   Icon Fonts
+================================================== */
+
+@import url("fonts/fontawesome/font-awesome.css");
+
+/* ==================================================
+   Google Fonts
+================================================== */
+
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600,600italic,700,700italic,900,900italic");
+
+/* ==================================================
+   Global Styles
+================================================== */
+*
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html
+{
+	height: 100%;
+	overflow: auto;
+	
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body
+{
+	font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	line-height: 32px;
+	font-weight: 300;
+	color: #999;
+	background: #FFF;
+	
+	text-rendering: optimizeLegibility;
+	vertical-align: baseline;
+}
+
+::selection
+{
+	background: #149077;
+	color: #FFF;
+}
+
+::-moz-selection
+{
+	background: #149077;
+	color: #FFF;
+}
+
+a
+{
+	color: #16A085;
+	text-decoration: none;
+}
+
+	a:hover
+	{
+		color: #444;
+	}
+
+/* ==================================================
+   Default Typography
+================================================== */
+
+p
+{
+	margin: 0 0 20px 0;
+}
+
+strong
+{
+	font-weight: 600;
+}
+
+em
+{
+	font-style: italic;
+}
+
+h1, h2, h3
+{
+	font-size: 60px;
+	line-height: 60px;
+	margin: 0 0 20px 0;
+	letter-spacing: -1px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+	h2
+	{
+		font-size: 38px;
+		line-height: 38px;
+	}
+		
+	h3
+	{
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+.logo
+{
+	width:70%;
+	heigth:auto;
+}
+
+/* ==================================================
+   Background Colours
+================================================== */
+
+.colour1
+{
+	background: #dd4a26;
+}
+
+.colour2
+{
+	background: #f7901e;
+}
+
+.colour3
+{
+	background: #EEE;
+}
+
+
+/* ==================================================
+   Separator Arrows
+================================================== */
+
+.arrow-separator
+{
+	position: relative;
+}
+
+	.arrow-separator:after
+	{
+		top: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-width: 12px;
+		left: 50%;
+		margin-left: -12px;
+		z-index: 11;
+	}
+	
+		.arrow-white:after
+		{
+			border-color: #FFF rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0); /** Using RGB to remove dark line in Firefox **/
+		}
+		
+		.arrow-theme:after
+		{
+			border-color: #dd4a26 rgba(22,160,133,0) rgba(22,160,133,0) rgba(22,160,133,0);
+		}
+		
+		.arrow-themelight:after
+		{
+			border-color: #f7901e rgba(26,188,156,0) rgba(26,188,156,0) rgba(26,188,156,0);
+		}
+
+		.arrow-grey:after
+		{
+			border-color: #EEE rgba(238,238,238,0) rgba(238,238,238,0) rgba(238,238,238,0);
+		}
+
+/* ==================================================
+   General Layout Styles
+================================================== */
+
+.fullwidth
+{
+	width: 100%;
+	padding: 60px 30px;
+	min-width: 280px;
+}
+
+	.fullwidth .bodycontainer
+	{
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1000px;
+		text-align: center;
+	}
+
+
+
+
+
+/* Overlay when Modal is open */
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+ 
+/* Modal box or Popup box */
+.popupContainer{
+	position:absolute;
+	width:400px;
+	height: auto;
+	left:45%;
+	top:80px;
+	background: #FFF;
+}
+
+#modal_trigger  {
+    margin: 15px auto;
+     width: 250px;
+     display: block;
+}
+
+.btn  {
+    padding: 10px 20px;
+     background:  #F4F4F2;
+}
+
+.btn_red  {
+    background:  #ED6347;
+     color:  #FFF;
+}
+
+.btn:hover  {
+    background:  #E4E4E2;
+}
+
+.btn_red:hover  {
+    background:  #C12B05;
+}
+
+a.btn  {
+    color: #666;
+     text-align:  center;
+     text-decoration:  none;
+}
+
+a.btn_red  {
+    color:  #FFF;
+}
+
+.one_half  {
+    width: 50%;
+     display:  block;
+    margin-left: 25%;
+}
+
+.one_half.last  {
+    width: 45%;
+     margin-left: 5%;
+}
+
+/* Popup Styles*/
+.popupHeader  {
+    font-size: 16px;
+     text-transform:  uppercase;
+}
+
+.popupHeader  {
+    background: #F4F4F2;
+     position: relative;
+     padding: 10px 20px;
+     border-bottom: 1px solid #DDD;
+     font-weight: bold;
+}
+
+.popupHeader .modal_close  {
+    position:  absolute;
+     right:  0;
+     top: 0;
+     padding: 10px 15px;
+     background: #E4E4E2;
+     cursor:  pointer;
+     color: #aaa;
+     font-size: 16px;
+}
+
+.popupBody  {
+    padding: 20px;
+}
+
+/* Social Login Form */
+
+.social_login .social_box  {
+    display: block;
+     clear: both;
+     padding: 10px;
+     margin-bottom:  10px;
+     background:  #F4F4F2;
+     overflow:  hidden;
+}
+
+.social_login .icon  {
+    display: block;
+     width: 10px;
+     padding: 5px 10px;
+     margin-right:  10px;
+     float: left;
+     color: #FFF;
+     font-size: 16px;
+     text-align:  center;
+}
+ 
+.social_login .fb .icon  {
+    background: #3B5998;
+}
+
+.social_login .google .icon  {
+    background: #DD4B39;
+}
+
+.social_login .icon_title  {
+    display: block;
+     padding: 5px 0;
+     float: left;
+     font-weight:  bold;
+     font-size:  16px;
+     color: #777;
+}
+
+.social_login .social_box:hover  {
+    background:  #E4E4E2;
+}
+
+
+.centeredText  {
+    text-align:  center;
+     margin:  20px 0;
+     clear:  both;
+     overflow:  hidden;
+     text-transform:  uppercase;
+}
+
+
+.action_btns  {
+    		clear: both;
+     overflow:  hidden;
+}
+
+.action_btns a  {
+    display:  block;
+}
+
+/* User Login Form */
+.user_login  {
+    display:  none;
+}
+
+.user_login label  {
+    display:  block;
+     margin-bottom: 5px;
+}
+
+.user_login input[type="text"],  .user_login input[type="email"],  .user_login input[type="password"]  {
+    display:  block;
+     width: 90%;
+     padding:  10px;
+     border: 1px solid #DDD;
+     color: #666;
+}
+
+.user_login input[type="checkbox"]  {
+    float: left;
+     margin-right: 5px;
+}
+
+.user_login input[type="checkbox"]+label  {
+    float: left;
+}
+
+
+.user_login .checkbox  {
+    margin-bottom:  10px;
+     clear:  both;
+     overflow:  hidden;
+}
+
+.forgot_password  {
+    display: block;
+     margin:  20px 0 10px;
+     clear:  both;
+     overflow:  hidden;
+     text-decoration:  none;
+     color: #ED6347;
+}
+
+/* User Register Form */
+.user_register  {
+    display:  none;
+}
+
+.user_register label  {
+    display:  block;
+     margin-bottom: 5px;
+}
+
+.user_register input[type="text"],  .user_register input[type="email"],  .user_register input[type="password"]  {
+    display:  block;
+     width: 90%;
+     padding:  10px;
+     border: 1px solid #DDD;
+     color: #666;
+}
+
+.user_register input[type="checkbox"]  {
+    float: left;
+     margin-right: 5px;
+}
+
+.user_register input[type="checkbox"]+label  {
+    float: left;
+}
+
+
+.user_register .checkbox  {
+    margin-bottom:  10px;
+     clear:  both;
+     overflow:  hidden;
+}
+
+
+
+
+
+
+
+
+
+#topcontainer
+{
+
+}
+
+	#topcontainer h1
+	{
+		padding: 6px 0 10px 0;
+		margin-bottom: 0;
+		letter-spacing: -1.5px;
+		color: #444;
+		font-weight: 400;
+	}
+	
+		#topcontainer h1 span
+		{
+			font-size: 70px;
+			line-height: 70px;
+			letter-spacing: -1.4px;
+			font-weight: 300;
+		}
+
+	#topcontainer p
+	{
+		margin-bottom: 0;
+		color: #999;
+	}
+
+	#topcontainer p span
+	{
+		font-size: 90px;
+		line-height: 90px;
+		color: #1abc9c;
+	}
+	
+#countdown
+{
+	color: #FFF;
+}
+
+	#countdown #countdowncont
+	{
+		width: 100%;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+		#countdown #countdowncont ul#countscript li
+		{
+			float: left;
+			width: 25%;
+			padding: 30px 0;
+			margin: 0;
+			list-style-type: none;
+		}
+
+			#countdown #countdowncont ul#countscript li span
+			{
+				font-size: 80px;
+				line-height: 80px;
+				font-weight: 300;
+				color: #FFF;
+			}
+
+			#countdown #countdowncont ul#countscript li p
+			{
+				color: rgba(255, 255, 255, 0.6);
+				font-weight: 300;
+				text-transform: uppercase;
+				font-size: 18px;
+				line-height: 18px;
+				margin: 0;
+			}
+		
+#maincont
+{
+	color: #FFF;
+}
+
+	#maincont a
+	{
+		color: #FFF;
+		opacity: 0.6;
+	}
+	
+		#maincont a:hover
+		{
+			opacity: 1;
+		}
+	
+	#maincont #signupform
+	{
+		margin: 0 auto 20px auto;
+		width: 80%;
+	}
+
+		.sb-search
+		{
+			position: relative;
+			width: 100%;
+			min-width: 50px;
+			height: 50px;
+			overflow: hidden;
+		}
+
+			.sb-search .sb-search-input
+			{
+				position: absolute;
+				top: 0;
+				right: 0;
+				border: none;
+				outline: none;
+				background: #FFF;
+				border: 0;
+				width: 100%;
+				height: 50px;
+				margin: 0;
+				z-index: 10;
+				padding: 0 65px 0 15px;
+				font-family: inherit;
+				font-size: 20px;
+				color: #333;
+				
+				-webkit-border-radius: 0px;
+				-moz-border-radius: 0px;
+				border-radius: 0px;
+				
+				-webkit-appearance: none;
+			}
+
+		button.formbutton, .sb-search-submit 
+		{
+			width: 60px;
+			height: 60px;
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			cursor: pointer;
+		}
+
+			.sb-search-submit
+			{
+				background: #FFF; /* IE needs this */
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+				filter: alpha(opacity=0); /* IE 5-7 */
+				opacity: 0;
+				color: transparent;
+				border: none;
+				outline: none;
+				z-index: -1;
+			}
+			
+			button.formbutton
+			{
+				color: #FFF;
+				background: #16A085;
+				z-index: 90;
+				border: 0;
+				height: 50px;
+			}
+			
+			button.formbutton span
+			{
+				font-size: 19px;
+			}
+			
+				button.formbutton:hover
+				{
+					background: #149077;
+				}
+			
+#quotecont
+{
+	padding: 30px 0;
+}
+
+	#quotecont .owl-theme .owl-controls .owl-page span
+	{
+		background: #CCC;
+	}
+	
+		#quotecont .owl-theme .owl-controls .owl-page.active span,
+		#quotecont .owl-theme .owl-controls.clickable .owl-page:hover span
+		{
+			background: #1ABC9C;
+		}
+
+#footercont
+{
+	position: relative;
+	font-size: 18px;
+}
+
+	#footercont #socialmedia ul
+	{
+		margin: 0 0 30px 0;
+	}
+
+	#footercont #socialmedia ul li
+	{
+		display: inline-block;
+		list-style-type: none;
+		margin: 0 10px;
+	}
+
+		#footercont #socialmedia ul li a
+		{
+			font-size: 36px;
+			color: #999;
+		}
+		
+			#footercont #socialmedia ul li a:hover
+			{
+				color: #1ABC9C;
+			}
+			
+	#footercont p.backtotop
+	{
+		margin: 0 0 40px 0;
+	}
+
+		#footercont p.backtotop a
+		{
+			position: relative;
+			display: inline-block;
+			background: #EEE;
+			font-size: 32px;
+			line-height: 32px;
+			color: #999;
+			padding: 5px 12px;
+			
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+		}
+		
+			#footercont p.backtotop a:hover
+			{
+				background-color: #1ABC9C;
+				color: #FFF;
+				text-decoration: none;
+			}
+			
+				#footercont p.backtotop a:active
+				{
+					top: 2px;
+				}
+
+/* ==================================================
+   Responsive Media Queries - Tablets
+================================================== */
+
+@media screen and (max-width: 768px)
+{
+
+	body
+	{
+		font-size: 23px;
+		line-height: 29px;
+	}
+	
+	#topcontainer h1
+	{
+		font-size: 54px;
+		line-height: 54px;
+		letter-spacing: -1.2px;
+	}
+
+		#topcontainer h1 span
+		{
+			font-size: 70px;
+			line-height: 70px;
+		}
+	
+	#countdown #countdowncont
+	{
+		max-width: 400px;
+	}
+	
+		#countdown #countdowncont ul#countscript li
+		{
+			width: 50%;
+			padding: 10px 0;
+		}
+		
+			#countdown #countdowncont ul#countscript li span
+			{
+				font-size: 70px;
+				line-height: 70px;
+			}
+			
+	#quotecont
+	{
+		padding: 15px 0;
+	}
+		
+	#footercont
+	{
+		font-size: 19px;
+	}
+		
+		#footercont #footerleft
+		{
+			float: none;
+			padding: 30px 0;
+			text-align: center;
+		}
+		
+			#footercont #socialmedia ul li a
+			{
+				font-size: 32px;
+			}
+		
+		#footercont #footerright
+		{
+			float: none;
+		}
+	
+}
+
+/* ==================================================
+   Responsive Media Queries - Mobiles
+================================================== */
+
+@media screen and (max-width: 480px)
+{	
+
+	body
+	{
+		font-size: 21px;
+		line-height: 27px;
+	}
+	
+	#topcontainer h1
+	{
+		font-size: 36px;
+		line-height: 36px;
+		
+	}
+
+		#topcontainer h1 span
+		{
+			font-size: 50px;
+			line-height: 50px;
+		}
+	
+	#countdown #countdowncont ul#countscript li
+	{
+		padding: 6px 0;
+	}
+	
+		#countdown #countdowncont ul#countscript li span
+		{
+			font-size: 62px;
+			line-height: 62px;
+		}
+
+		#countdown #countdowncont ul#countscript li p
+		{
+			font-size: 16px;
+			line-height: 16px;
+		}
+		
+	#maincont #signupform
+	{
+		margin: 0 auto 20px auto;
+		width: 100%;
+	}
+	
+	#quotecont
+	{
+		padding: 5px 0;
+	}
+	
+	#footercont #socialmedia ul li
+	{
+		margin: 0 5px;
+	}
+	
+		#footercont #socialmedia ul li a
+		{
+			font-size: 28px;
+		}
+	
+}
+
