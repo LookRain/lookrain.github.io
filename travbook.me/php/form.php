@@ -5,13 +5,14 @@ if (mysqli_connect_errno()){ // are we connected properly?
 	echo 'failed to connect'.mysqli_connect_errno();
 }
 //Fetching Values from URL
-$name=$_POST['name'];
-$email=$_POST['email'];
+
+$name1=$_POST['name'];
+$email1=$_POST['email'];
 
 //Insert query
 
 
-$sql = "INSERT INTO form_element (name, email) VALUES ($name, $email)";
+$sql = "INSERT INTO signup_form (name, email) VALUES ($name1, $email1)";
 if (mysqli_query($con, $sql)) {
 	echo "inserted";
 } else {
