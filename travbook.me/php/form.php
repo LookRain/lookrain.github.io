@@ -12,7 +12,7 @@ $email1=$_POST['email'];
 //Insert query
 
 
-$sql = 'INSERT INTO signup_form (name, email) VALUES ("$name1", "$email1")';
+$sql = "INSERT INTO signup_form (name, email) VALUES ('$name1','$email1')";
 if (mysqli_query($con, $sql)) {
 	echo "inserted";
 } else {
