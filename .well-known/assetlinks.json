@@ -1,0 +1,14 @@
+[
+  {
+  "relation": [
+  "delegate_permission/common.handle_all_urls"
+  ],
+  "target": {
+  "namespace": "android_app",
+  "package_name": "com.rate.staging.ratex.test",
+  "sha256_cert_fingerprints": [
+  "69:5D:26:61:30:B4:AE:59:67:A1:AA:85:28:19:CE:0E:E8:0A:11:AD:5B:1D:A9:37:5E:76:46:64:30:8C:D7:A4"
+  ]
+  }
+  }
+  ]
